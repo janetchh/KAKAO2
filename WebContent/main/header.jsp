@@ -120,7 +120,7 @@
 			<div class="dropdown">
 			  <button class="dropbtn">카테고리</button>
 			  <div class="dropdown-content">
-			    <a href="#">인형</a>
+			    <a href="doll.jsp">인형</a>
 			    <a href="#">리빙</a>
 			    <a href="#">잡화</a>
 			    <a href="#">문구</a>
