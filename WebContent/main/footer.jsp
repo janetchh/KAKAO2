@@ -46,7 +46,7 @@
                |
             </p>
          </div>
-            <img src="/KAKAO/img/logo/logo.png">
+            <img src="/KAKAO2/img/logo/logo.png">
          <div class="footer-center">
             <div>
                	<span>Copyright Kakao Friends Corp.</span>

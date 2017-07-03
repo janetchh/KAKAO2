@@ -100,7 +100,7 @@
 		<div id="headerContainer">
 			<div id="mainTitle" align="center">
 				<a href="main.jsp">
-					<img src="/KAKAO/img/logo/mainlogo.jpg">
+					<img src="/KAKAO2/img/logo/mainlogo.jpg">
 				</a>
 			</div>
 			
@@ -120,7 +120,7 @@
 			<div class="dropdown">
 			  <button class="dropbtn">카테고리</button>
 			  <div class="dropdown-content">
-			    <a href="doll.jsp">인형</a>
+			    <a href="doll.do?cmd=productList&job=doll">인형</a>
 			    <a href="#">리빙</a>
 			    <a href="#">잡화</a>
 			    <a href="#">문구</a>

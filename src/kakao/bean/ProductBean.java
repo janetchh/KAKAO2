@@ -1,91 +1,119 @@
 package kakao.bean;
 
 public class ProductBean {
-	private String productNo;
-	private String productName;
-	private String productOrigin;
-	private String productCategory;
-	private int productPrice;
-	private String fileName1;
-	private String fileName2;
-
+//prono	proname	price	character	type	subtype	mainimg	detailimg1	detailimg2	datailimg3	notice	info
+	private String prono;
+	private String proname;
+	private int price;
+	private String character;
+	private String type;
+	private String subtype;
+	private String mainimg;
+	private String detailimg1;
+	private String detailimg2;
+	private String datailimg3;
+	private String notice;
+	private String info;
 	public ProductBean() {
 		super();
 	}
-
-	public ProductBean(String productNo, String productName, String productOrigin, String productCategory,
-			int productPrice, String fileName1, String fileName2) {
+	public ProductBean(String prono, String proname, int price, String character, String type, String subtype,
+			String mainimg, String detailimg1, String detailimg2, String datailimg3, String notice, String info) {
 		super();
-		this.productNo = productNo;
-		this.productName = productName;
-		this.productOrigin = productOrigin;
-		this.productCategory = productCategory;
-		this.productPrice = productPrice;
-		this.fileName1 = fileName1;
-		this.fileName2 = fileName2;
+		this.prono = prono;
+		this.proname = proname;
+		this.price = price;
+		this.character = character;
+		this.type = type;
+		this.subtype = subtype;
+		this.mainimg = mainimg;
+		this.detailimg1 = detailimg1;
+		this.detailimg2 = detailimg2;
+		this.datailimg3 = datailimg3;
+		this.notice = notice;
+		this.info = info;
 	}
-
-	public String getProductNo() {
-		return productNo;
+	public String getProno() {
+		return prono;
 	}
-
-	public void setProductNo(String productNo) {
-		this.productNo = productNo;
+	public void setProno(String prono) {
+		this.prono = prono;
 	}
-
-	public String getProductName() {
-		return productName;
+	public String getProname() {
+		return proname;
 	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setProname(String proname) {
+		this.proname = proname;
 	}
-
-	public String getProductOrigin() {
-		return productOrigin;
+	public int getPrice() {
+		return price;
 	}
-
-	public void setProductOrigin(String productOrigin) {
-		this.productOrigin = productOrigin;
+	public void setPrice(int price) {
+		this.price = price;
 	}
-
-	public String getProductCategory() {
-		return productCategory;
+	public String getCharacter() {
+		return character;
 	}
-
-	public void setProductCategory(String productCategory) {
-		this.productCategory = productCategory;
+	public void setCharacter(String character) {
+		this.character = character;
 	}
-
-	public int getProductPrice() {
-		return productPrice;
+	public String getType() {
+		return type;
 	}
-
-	public void setProductPrice(int productPrice) {
-		this.productPrice = productPrice;
+	public void setType(String type) {
+		this.type = type;
 	}
-
-	public String getFileName1() {
-		return fileName1;
+	public String getSubtype() {
+		return subtype;
 	}
-
-	public void setFileName1(String fileName1) {
-		this.fileName1 = fileName1;
+	public void setSubtype(String subtype) {
+		this.subtype = subtype;
 	}
-
-	public String getFileName2() {
-		return fileName2;
+	public String getMainimg() {
+		return mainimg;
 	}
-
-	public void setFileName2(String fileName2) {
-		this.fileName2 = fileName2;
+	public void setMainimg(String mainimg) {
+		this.mainimg = mainimg;
 	}
-
+	public String getDetailimg1() {
+		return detailimg1;
+	}
+	public void setDetailimg1(String detailimg1) {
+		this.detailimg1 = detailimg1;
+	}
+	public String getDetailimg2() {
+		return detailimg2;
+	}
+	public void setDetailimg2(String detailimg2) {
+		this.detailimg2 = detailimg2;
+	}
+	public String getDatailimg3() {
+		return datailimg3;
+	}
+	public void setDatailimg3(String datailimg3) {
+		this.datailimg3 = datailimg3;
+	}
+	public String getNotice() {
+		return notice;
+	}
+	public void setNotice(String notice) {
+		this.notice = notice;
+	}
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
 	@Override
 	public String toString() {
-		return "ProductBean [productNo=" + productNo + ", productName=" + productName + ", productOrigin="
-				+ productOrigin + ", productCategory=" + productCategory + ", productPrice=" + productPrice
-				+ ", fileName1=" + fileName1 + ", fileName2=" + fileName2 + "]";
+		return "ProductBean [prono=" + prono + ", proname=" + proname + ", price=" + price + ", character=" + character
+				+ ", type=" + type + ", subtype=" + subtype + ", mainimg=" + mainimg + ", detailimg1=" + detailimg1
+				+ ", detailimg2=" + detailimg2 + ", datailimg3=" + datailimg3 + ", notice=" + notice + ", info=" + info
+				+ "]";
 	}
-
+	
+	
+	
+	
 }

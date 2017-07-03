@@ -8,7 +8,7 @@ public class SqlSessionFactoryManager {
 	private static SqlSessionFactory sqlSessionFactory;
 	static{
 		try {
-			Reader reader=Resources.getResourceAsReader("mall/xml/Config.xml");
+			Reader reader=Resources.getResourceAsReader("kakao/xml/Config.xml");
 			sqlSessionFactory=new SqlSessionFactoryBuilder().build(reader);
 		} catch (Exception e) {
 			// TODO: handle exception

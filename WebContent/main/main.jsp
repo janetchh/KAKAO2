@@ -42,15 +42,15 @@
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner">
 		      <div class="item active">
-		        <img src="/KAKAO/img/main1.JPG" alt="main1" style="width:100%; height: 100% ">
+		        <img src="/KAKAO2/img/main1.JPG" alt="main1" style="width:100%; height: 100% ">
 		      </div>
 		
 		      <div class="item">
-		        <img src="/KAKAO/img/main2.JPG" alt="main2" style="width:100%; height: 100% ">
+		        <img src="/KAKAO2/img/main2.JPG" alt="main2" style="width:100%; height: 100% ">
 		      </div>
 		    
 		      <div class="item">
-		        <img src="/KAKAO/img/main3.JPG" alt="main3" style="width:100%; height: 100% ">
+		        <img src="/KAKAO2/img/main3.JPG" alt="main3" style="width:100%; height: 100% ">
 		      </div>
 		    </div>
 		

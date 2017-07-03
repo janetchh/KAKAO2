@@ -1,5 +1,6 @@
 package kakao.action;
 
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,8 +22,13 @@ public class ProductListAction implements Action {
 
 	@Override
 	public ActionForWard execute(HttpServletRequest request) {
-		List<ProductBean> list = dao.productListAll();
-		request.setAttribute("productList", list);
+		try {
+			List<ProductBean> list = dao.selectList();
+			request.setAttribute("productList", list);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return new ActionForWard(path, redirect);
 	}
 

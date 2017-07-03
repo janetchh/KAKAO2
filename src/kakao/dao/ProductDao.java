@@ -1,5 +1,6 @@
 package kakao.dao;
 
+
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,9 +14,13 @@ public class ProductDao {
 	public ProductDao() {
 		sqlSessionFactory = SqlSessionFactoryManager.getSqlSessionFactory();
 	}
-
-	public List<ProductBean> productListAll() {
-		return sqlSessionFactory.openSession().selectList("productListAll");
+	
+	public List<ProductBean> selectList()throws Exception{
+		return sqlSessionFactory.openSession().selectList("selectList");
+	}
+	
+	public List<ProductBean> selectOne(String prono) throws Exception{
+		return sqlSessionFactory.openSession().selectList("selectOne", prono);
 	}
 
 }

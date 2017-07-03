@@ -2,11 +2,12 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mall.bean.ProductBean">
-	<select id="productListAll" resultType="product">
-		SELECT PRODUCTNO, PRODUCTCATEGORY, PRODUCTORIGIN,
-		PRODUCTPRICE, PRODUCTNAME, FILENAME1, FILENAME2
-		FROM PRODUCT
+<mapper namespace="kakao.bean.ProductBean">
+	<select id="selectList" resultType="product">
+		SELECT * FROM PRODUCT WHERE SUBTYPE='25/35cm'
+	</select>
+	<select id="selectOne" parameterType="java.lang.String" resultType="product" >
+		SELECT * FROM PRODUCT WHERE PRONO=#{prono}
 	</select>
 </mapper>
 
