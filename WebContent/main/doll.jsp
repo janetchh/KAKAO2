@@ -54,31 +54,11 @@ div.desc {
 		<div class="maindiv" align="center">
 				<c:forEach var="i" items="${productList}">
 						<div class="gallery">
-							<a target="_blank" href="info.do?cmd=productInfo&prono=${i.prono}"> <img src="/KAKAO2/img/doll/25_35cm/${i.mainimg}" alt="${i.proname}" width="600" height="400">
+							<a href="info.do?cmd=productInfo&prono=${i.prono}"> <img src="/KAKAO2/img/doll/25_35cm/${i.mainimg}" alt="${i.proname}" width="600" height="400">
 							<div class="desc">${i.proname}</div>
 							<div class="desc">${i.price}</div>
 							</a>
-							
 						</div>
-						<%-- 
-						<div class="gallery">
-							<a target="_blank" href=""> <img src="/KAKAO2/img/doll/mini/${i.mainimg}" alt="${i.proname}" width="600" height="400">
-							</a>
-							<div class="desc">Add a description of the image here</div>
-						</div>
-						
-						<div class="gallery">
-							<a target="_blank" href=""> <img src="/KAKAO2/img/doll/mini/${i.mainimg}" alt="${i.proname}" width="600" height="400">
-							</a>
-							<div class="desc">Add a description of the image here</div>
-						</div>
-						
-						<div class="gallery">
-							<a target="_blank" href=""> <img src="/KAKAO2/img/doll/mini/${i.mainimg}" alt="${i.proname}" width="600" height="400">
-							</a>
-							<div class="desc">Add a description of the image here</div>
-						</div>
-						 --%>
 				</c:forEach>
 		</div>
 	</div>

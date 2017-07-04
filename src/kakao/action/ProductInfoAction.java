@@ -23,8 +23,8 @@ public class ProductInfoAction implements Action{
 	public ActionForWard execute(HttpServletRequest request) {
 		try {
 			String prono = (String) request.getParameter("prono");
-			List<ProductBean> info = dao.selectOne(prono);
-			request.setAttribute("producInfo", info);
+			ProductBean bean = (ProductBean)dao.selectOne(prono);
+			request.setAttribute("productInfo", bean);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

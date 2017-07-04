@@ -19,8 +19,8 @@ public class ProductDao {
 		return sqlSessionFactory.openSession().selectList("selectList");
 	}
 	
-	public List<ProductBean> selectOne(String prono) throws Exception{
-		return sqlSessionFactory.openSession().selectList("selectOne", prono);
+	public Object selectOne(String prono) throws Exception{
+		return sqlSessionFactory.openSession().selectOne("selectOne", prono);
 	}
 
 }

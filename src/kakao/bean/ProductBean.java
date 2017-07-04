@@ -1,7 +1,6 @@
 package kakao.bean;
 
 public class ProductBean {
-//prono	proname	price	character	type	subtype	mainimg	detailimg1	detailimg2	datailimg3	notice	info
 	private String prono;
 	private String proname;
 	private int price;
@@ -14,25 +13,6 @@ public class ProductBean {
 	private String datailimg3;
 	private String notice;
 	private String info;
-	public ProductBean() {
-		super();
-	}
-	public ProductBean(String prono, String proname, int price, String character, String type, String subtype,
-			String mainimg, String detailimg1, String detailimg2, String datailimg3, String notice, String info) {
-		super();
-		this.prono = prono;
-		this.proname = proname;
-		this.price = price;
-		this.character = character;
-		this.type = type;
-		this.subtype = subtype;
-		this.mainimg = mainimg;
-		this.detailimg1 = detailimg1;
-		this.detailimg2 = detailimg2;
-		this.datailimg3 = datailimg3;
-		this.notice = notice;
-		this.info = info;
-	}
 	public String getProno() {
 		return prono;
 	}
@@ -105,6 +85,25 @@ public class ProductBean {
 	public void setInfo(String info) {
 		this.info = info;
 	}
+	public ProductBean(String prono, String proname, int price, String character, String type, String subtype,
+			String mainimg, String detailimg1, String detailimg2, String datailimg3, String notice, String info) {
+		super();
+		this.prono = prono;
+		this.proname = proname;
+		this.price = price;
+		this.character = character;
+		this.type = type;
+		this.subtype = subtype;
+		this.mainimg = mainimg;
+		this.detailimg1 = detailimg1;
+		this.detailimg2 = detailimg2;
+		this.datailimg3 = datailimg3;
+		this.notice = notice;
+		this.info = info;
+	}
+	public ProductBean() {
+		super();
+	}
 	@Override
 	public String toString() {
 		return "ProductBean [prono=" + prono + ", proname=" + proname + ", price=" + price + ", character=" + character
@@ -112,8 +111,4 @@ public class ProductBean {
 				+ ", detailimg2=" + detailimg2 + ", datailimg3=" + datailimg3 + ", notice=" + notice + ", info=" + info
 				+ "]";
 	}
-	
-	
-	
-	
 }
