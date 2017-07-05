@@ -13,6 +13,7 @@ public class ProductBean {
 	private String datailimg3;
 	private String notice;
 	private String info;
+	private int count;
 	public String getProno() {
 		return prono;
 	}
@@ -85,8 +86,18 @@ public class ProductBean {
 	public void setInfo(String info) {
 		this.info = info;
 	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	public ProductBean() {
+		super();
+	}
 	public ProductBean(String prono, String proname, int price, String character, String type, String subtype,
-			String mainimg, String detailimg1, String detailimg2, String datailimg3, String notice, String info) {
+			String mainimg, String detailimg1, String detailimg2, String datailimg3, String notice, String info,
+			int count) {
 		super();
 		this.prono = prono;
 		this.proname = proname;
@@ -100,15 +111,14 @@ public class ProductBean {
 		this.datailimg3 = datailimg3;
 		this.notice = notice;
 		this.info = info;
-	}
-	public ProductBean() {
-		super();
+		this.count = count;
 	}
 	@Override
 	public String toString() {
 		return "ProductBean [prono=" + prono + ", proname=" + proname + ", price=" + price + ", character=" + character
 				+ ", type=" + type + ", subtype=" + subtype + ", mainimg=" + mainimg + ", detailimg1=" + detailimg1
 				+ ", detailimg2=" + detailimg2 + ", datailimg3=" + datailimg3 + ", notice=" + notice + ", info=" + info
-				+ "]";
+				+ ", count=" + count + "]";
 	}
+	
 }

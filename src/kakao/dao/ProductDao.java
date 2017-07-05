@@ -3,6 +3,7 @@ package kakao.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import kakao.bean.ProductBean;
@@ -22,5 +23,4 @@ public class ProductDao {
 	public Object selectOne(String prono) throws Exception{
 		return sqlSessionFactory.openSession().selectOne("selectOne", prono);
 	}
-
 }

@@ -11,9 +11,16 @@
 <script type="text/javascript">
   $(function(){
 	  var price=0;
-	  $("input#price").each(function(){
-		price+=eval($(this).val());		  
+	  $("input.price").each(function(){
+		price+=eval($(this).val())*eval($(this).siblings(".count").val());
 	  });
+	  
+	  
+	  /* 姥薄背だだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだだ */
+	  /*  $("button#mod").click(function(){
+		 price+=eval($("input.count").val())*eval($("label.priceLabel").text());
+		 alert(price);
+	  });  */
 	  $("label#totalPrice").text(price);
   });
 </script>
@@ -21,6 +28,7 @@
 <body>
   <jsp:include page="header.jsp" />
   	<img alt="cartList" src="/KAKAO2/img/cartFont.jpg" style="width: 100%; height: 100%;">
+  
     <div class="wrap">
     	<h2 style="padding:20px 0 20px 400px;" align="left">恥 ${totalcount}鯵税 雌念戚 繕噺鞠醸柔艦陥.</h2>
     	<c:forEach var="i" items="${cartList}">
@@ -28,19 +36,20 @@
     		<a><img src="/KAKAO2/img/doll/25_35cm/${i.mainimg}" width="200" height="200" style="padding-right: 20px;"></a>
     			<span style="font-size: 18pt; font-weight: bold; padding-left: 30px; padding-right: 300px;" > ${i.proname} </span>
     			<div style="width: 100%;" align="right" >
-	    			<span style="font-size: 14pt; padding: 10px;">榎衝 : ${i.price}据</span>
-	    			<span style="font-size: 14pt; padding: 10px;">呪勲 : <input type="number" id="count" name="count" value="1" step="1" min="1" max="10" style="text-align: center;  width: 70px;"></span>
-	    			<span style="padding-left: 10px; padding-right: 20px; "><a href="deleteCart.do?cmd=deleteCart&prono=${i.prono}"><button type="button" class="btn btn-info">肢薦</button></a></span>
+	    			<span id="priceSpan" style="font-size: 14pt; padding: 10px; ">榎衝 : <label class="priceLabel" style="font-weight: light;">${i.price}</label>据</span>
+	    			<span style="font-size: 14pt; padding: 10px;">呪勲 : <input type="number" class="count" name="count" value="${i.count}" step="1" min="1" max="10" style="text-align: center;  width: 70px;">
+	    			<input type="hidden" class="price" value="${i.price}"></span>
+	    			<span style="padding-left: 10px;"><a href="#"><button type="button" id="mod" class="btn btn-info">呪舛</button></a></span>
+	    			<span style="padding-left: 10px; padding-right: 20px;"><a href="deleteCart.do?cmd=deleteCart&prono=${i.prono}"><button type="button" class="btn btn-info">肢薦</button></a></span>
     			</div>
-    			<input type="hidden" id="price" value="${i.price}">
     		<hr>
     	</div>
     	</c:forEach>
     </div>
     <div class="priceDiv" style="width:59%; margin: 0 auto;">
     	<h2 style="padding: 20px;" align="left">舌郊姥艦 杯域</h2>
-    	<div style="width: 100%" align="right"><label style="padding: 20px; font-size: 14pt; font-weight: lighter;">恥杯域榎衝 <label id="totalPrice" style="font-size: 14pt; font-weight: bold;"></label>据</label></div> 
-    	<hr style="border-color: #666666;">
+    	<div style="width: 100%" align="right"><label style="padding: 20px; font-size: 14pt; font-weight: lighter;">恥杯域榎衝 &emsp; <label id="totalPrice" style="font-size: 14pt; font-weight: bold;"></label>据</label></div> 
+    	<hr style="border-color: #717070;">
     </div>
   <jsp:include page="footer.jsp" />
 </body>

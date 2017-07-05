@@ -10,6 +10,7 @@ public class ActionFactory {
 
 	public static Action getAction(String cmd) {
 		Action action = null;
+		
 		if (cmd.equals("productList")) {
 			action = new ProductListAction("doll.jsp", false);
 		} else if(cmd.equals("productInfo")){

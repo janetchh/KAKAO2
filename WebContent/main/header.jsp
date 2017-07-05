@@ -131,7 +131,7 @@
 			<div class="dropdown">
 			  <button class="dropbtn">마이페이지</button>
 			  <div class="dropdown-content">
-			    <a href="#">로그인</a>
+			    <a href="login.jsp">로그인</a>
 			    <a href="cartList.do?cmd=cartList">장바구니</a>
 			    <a href="#">주문내역</a>
 			    <a href="#">찜</a>

@@ -25,6 +25,7 @@ public class CartListAction implements Action{
 	@Override
 	public ActionForWard execute(HttpServletRequest request) {
 		String prono = (String) request.getParameter("prono");
+		String count = request.getParameter("count");
 		ArrayList<ProductBean> list = null;
 		ProductBean bean = null;
 		HttpSession session = request.getSession();
@@ -32,6 +33,7 @@ public class CartListAction implements Action{
 		
 		try {
 			bean = (ProductBean) dao.selectOne(prono);
+			bean.setCount(Integer.parseInt(count));
 			list = (ArrayList)session.getAttribute("cartList");
 			
 			if(list==null){
