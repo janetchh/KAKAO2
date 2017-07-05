@@ -22,7 +22,7 @@ public class CartDeleteAction implements Action{
 	public ActionForWard execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
 		
-		String prono=request.getParameter("prono");	
+		String prono=request.getParameter("prono");
 		HttpSession session = request.getSession();
 		ArrayList<ProductBean> cart = (ArrayList<ProductBean>)session.getAttribute("cartList"); 
 		
@@ -33,6 +33,7 @@ public class CartDeleteAction implements Action{
 			}
 		}
 		session.setAttribute("cartList", cart);
+		session.setAttribute("totalcount",cart.size());
 		if(cart.size()==0){
 			path="doll.do?cmd=productList";
 		}
