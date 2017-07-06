@@ -21,7 +21,7 @@ public class ActionFactory {
 		} else if(cmd.equals("deleteCart")){
 			action = new CartDeleteAction("cartList.do?cmd=cartList", true);
 		} else if(cmd.equals("login")){
-			action = new LoginAction("main.jsp", true);
+			action = new LoginAction("", true);
 		}
 		return action;
 

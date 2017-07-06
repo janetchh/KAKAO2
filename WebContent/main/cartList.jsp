@@ -30,8 +30,8 @@
 </head>
 <body>
   <jsp:include page="header.jsp" />
-  	<img alt="cartList" src="/KAKAO2/img/cartFont.jpg" style="width: 100%; height: 100%;">
   
+  	<img alt="cartList" src="/KAKAO2/img/cartFont.jpg" style="width: 100%; height: 100%;">
     <div class="wrap">
     	<h2 style="padding:20px 0 20px 400px;" align="left">총 ${totalcount}개의 상품이 조회되었습니다.</h2>
     	<c:forEach var="i" items="${cartList}">

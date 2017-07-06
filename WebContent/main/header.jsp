@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <link href="/Baegopang/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 	html{
 		margin: 0 auto;
@@ -15,7 +20,7 @@
 	    text-align: center;
 	  	margin: auto;
 	    margin-bottom : 5px;
-	    width: 1500px;
+	    width: 100%;
 	    position:relative;z-index:2;
 	}
 	body{
@@ -95,8 +100,32 @@
 .dropdown:hover .dropbtn {
     background-color: white;
 }
+.loginImg{
+	width: 100%;
+	height: 60px;
+	background-image:url(/KAKAO2/img/login.png);
+	
+}
 </style>
+<script type="text/javascript">
+  $(function(){
+	   if($("input.id").val()==''){
+		  $("div.loginImg").hide();
+	  }else{
+		  $("div.loginImg").show();
+	  } 
+	  
+  });
+</script>
 <header>
+	<!--로그인성공시  -->
+	<div class="loginImg" style="width: 100%;" >
+	<br>
+	 	<font class="title" size="4" style="color: white; padding-right: 250px;">${id}님 환영합니다:)</font>
+	 	<input type="hidden" class="id" value="${id}">
+	</div>
+	
+	<!-- 카테고리 -->
 		<div id="headerContainer">
 			<div id="mainTitle" align="center">
 				<a href="main.jsp">

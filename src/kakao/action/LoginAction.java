@@ -8,7 +8,7 @@ import kakao.dao.MemberDao;
 public class LoginAction implements Action{
 	private String path;
 	private boolean redirect;
-	private MemberDao dao;
+	private MemberDao dao = new MemberDao();
 	
 	public LoginAction(String path, boolean redirect) {
 		super();
@@ -23,9 +23,11 @@ public class LoginAction implements Action{
 		String pw=request.getParameter("pw");
 		try {
 			if(dao.idCheck(id, pw)){
-				
+				request.getSession().setAttribute("id", id);
+				request.getSession().setMaxInactiveInterval(10000);
+				path="main.jsp";
 			}else{
-				
+				path="login.jsp";
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

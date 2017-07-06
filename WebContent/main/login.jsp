@@ -4,8 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link href="/Baegopang/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/Baegopang/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
 	div.padding{
@@ -17,7 +21,7 @@
 </style>
 <script type="text/javascript">
   $(function(){
-	  $("button#loginBtn").click(function(){
+	  $("button[name='loginBtn']").click(function(){
 		 $("form#loginFrm").submit();
 	  });
   });
@@ -30,10 +34,10 @@
 		<div class="mainDiv" align="center" style="margin: 30px auto; width: 500px; height: 500px; border: 1px solid #D5D5D5;">
 			<h1 style="padding: 30px;" align="center">KAKAO 로그인</h1>
 				<div class="input-group">
-					<div class="difPadding"><input type="text" id="id" class="form-control" placeholder="카카오계정(email)"></div>
-					<div class="difPadding"><input type="text" id="pw" class="form-control" placeholder="비밀번호(4~16자리)"></div>
-					<div class="padding"><input type="checkbox" id="idSave">카카오계정 저장</div>
-					<div class="padding"><button type="button" id="loginBtn" class="btn btn-info" style="width: 196px;">로그인</button></div>
+					<div class="difPadding"><input type="text" name="id" class="form-control" placeholder="카카오계정(email)"></div>
+					<div class="difPadding"><input type="text" name="pw" class="form-control" placeholder="비밀번호(4~16자리)"></div>
+					<div class="padding"><input type="checkbox" name="idSave">카카오계정 저장</div>
+					<div class="padding"><button type="button" name="loginBtn" class="btn btn-info" style="width: 196px;">로그인</button></div>
 				</div>
 			<hr style="width: 450px; margin-top: 50px;">
 				<div class="bottom-group">
